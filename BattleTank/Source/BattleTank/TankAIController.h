@@ -6,6 +6,8 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
+class ATankPawn;
+
 /**
  * 
  */
@@ -20,6 +22,14 @@ public:
 
 	virtual void BeginPlay() override;
 
+	ATankPawn* GetAITankPawn();
+
+	ATankPawn* GetPlayerTankPawn();
+
 private:
+
+	ATankPawn* m_pPlayerTankPawn;
+
+	ATankPawn* m_pAITankPawn;
 
 };
