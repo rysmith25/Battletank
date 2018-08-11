@@ -6,8 +6,17 @@
 ATankPlayerController::ATankPlayerController()
 {
 	m_pTankPawn = nullptr;
+	
+}
+
+void ATankPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
 
 	m_pTankPawn = Cast<ATankPawn>(GetPawn());
+
+	if(m_pTankPawn != nullptr)
+		UE_LOG(LogTemp, Warning, TEXT("PlayerController %s has controller in Begin Play"), *(m_pTankPawn->GetName()));
 }
 
 ATankPawn* ATankPlayerController::GetControlledTank()

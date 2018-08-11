@@ -17,6 +17,8 @@ public:
 
 	ATankPlayerController();
 
+	virtual void BeginPlay() override;
+
 	ATankPawn* GetControlledTank();
 
 private:
