@@ -19,7 +19,14 @@ public:
 
 	virtual void BeginPlay() override;
 
+	virtual void Tick(float DeltaTime) override;
+
 	ATankPawn* GetControlledTank();
+
+	// Start the tank moving the barrel towards the cross hair.
+	void AimAtCrosshair();
+
+	bool GetSightRayHitLocation(FVector& endLocation) const;
 
 private:
 		

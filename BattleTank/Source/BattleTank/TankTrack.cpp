@@ -6,7 +6,7 @@
 
 UTankTrack::UTankTrack()
 {
-	m_TrackMaxDrivingForce = 4000000.0f;;
+	m_TrackMaxDrivingForce = 30000000.0f;;
 
 }
 
