@@ -28,7 +28,21 @@ public:
 
 	bool GetSightRayHitLocation(FVector& endLocation) const;
 
+	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CrossHair")
+	float m_CrossHairXLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CrossHair")
+	float m_CrossHairYLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CrossHair")
+	float m_LineTraceRange;
+
 private:
 		
 	ATankPawn* m_pTankPawn;
+	
 };
